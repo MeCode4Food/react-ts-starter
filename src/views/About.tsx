@@ -3,7 +3,7 @@ import Row from 'src/components/container/Row';
 import React from 'react';
 
 const About = () => (
-  <Container fluid={true} className="main-content-container px-4">
+  <Container fluid={true} className="main-content-container px-4 py-3">
     <Row noGutters={true} className="page-header py-4">
       About Me
     </Row>

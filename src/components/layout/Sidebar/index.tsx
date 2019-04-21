@@ -32,7 +32,9 @@ class Sidebar extends Component<RouteComponentProps & SidebarProps> {
 }
 
 const StyledSidebar = styled.div`
-  height: 100vh;
+  @media (min-width: 768px){
+    height: 100vh;
+  }
 `
 
 type SidebarProps = {
