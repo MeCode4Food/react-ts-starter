@@ -1,4 +1,4 @@
-### A React Webapp written in TypeScript
+# A React Webapp written in TypeScript
 
 ## Why TypeScript
 Because I prefer compile-time errors. 
