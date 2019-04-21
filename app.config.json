@@ -2,9 +2,9 @@
   "apps" : [
     {
       "name"      : "ck-home",
-      "script"    : "npm",
+      "script"    : "serve",
       "interpreter": "none",
-      "args": "serve -s build"
+      "args": "-s build"
     }
   ]
 }
