@@ -24,6 +24,10 @@ const StyledImgParent = styled.div`
 const StyledImg = styled.img`
   object-fit: scale-down;
   max-width: 100%;
+  
+  @media (min-width: 768px) {
+    height: 400px;
+  }
 `
 
 
