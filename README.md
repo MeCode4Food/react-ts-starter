@@ -15,3 +15,8 @@ Bear with me while I compile locally and commit the build. You can compile it yo
 
 ## Why does bindActionCreators takes in `Dispatch<AnyAction>` instead of `Dispatch<CatActions>` as the generic?
 Because when you use `connect()`, it leverages on the `dispatch()` from the store, which dispatches `AnyActions` instead of just cat actions
+
+# Things to Work On/Fix
+- Table component uses lambdas in the tags inside the returned jsx. This might lead to perf bottleneck issues
+- Table component is functionally too tightly coupled. But maybe that's just because only one page uses it
+- Add support for Redux Thunk (although I figure it would not be that troublesome, as a middleware)
