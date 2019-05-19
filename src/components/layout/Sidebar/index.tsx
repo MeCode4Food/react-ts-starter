@@ -11,7 +11,7 @@ class Sidebar extends Component<RouteComponentProps & SidebarProps> {
     const { className } = this.props
     const classes = className
     return (
-      <StyledSidebar className={`main-sidebar nav border-right flex-column px-3 col-12 col-md-3 col-lg-2 ${classes}`}>
+      <StyledSidebar className={`main-sidebar nav border-right flex-column ${classes}`}>
         <SidebarPadding />
         {
           routes.filter(route => route.title)

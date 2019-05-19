@@ -4,7 +4,7 @@ import Home from "../views/Home"
 
 // Layout Types
 import { DefaultLayout } from "../layouts";
-import About from 'src/views/About';
+import CatList from 'src/views/CatList';
 
 export default [
   {
@@ -21,10 +21,10 @@ export default [
     glyphicon: "home"
   },
   {
-    path: "/about",
+    path: "/cat-list",
     layout: DefaultLayout,
-    component: About,
-    title: "About",
+    component: CatList,
+    title: "Cat List",
     glyphicon: "user"
   },
 ]

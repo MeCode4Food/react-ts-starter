@@ -9,15 +9,15 @@ import styled from 'styled-components';
 
 const DefaultLayout = ({ children, noNavbar = false, noFooter = false }: DefaultLayoutProps) => (
   <Container fluid={true}>
-    <StyledRow>
-      {/* <div className="main-sidebar px-0 col-12 col-md-3">Sidebar</div> */}
-      <Sidebar/>
-      <div className="main-content p-0 col-12 col-lg-10 col-md-9">
-        <Navbar className="main-navbar bg-white" />
-        {children}
-        <Footer className="main-footer d-flex p-2 px-3 bg-white border-top" />
-      </div>
-    </StyledRow>
+      <StyledRow>
+        {/* <div className="main-sidebar px-0 col-12 col-md-3">Sidebar</div> */}
+        <Sidebar className=" px-3 col-12 col-lg-2 col-md-3 "/>
+        <div className="main-content p-0 col-12 col-lg-10 col-md-9">
+          <Navbar className="main-navbar bg-white" />
+          {children}
+          <Footer className="main-footer d-flex p-2 px-3 bg-white border-top" />
+        </div>
+      </StyledRow>
   </Container>
 );
 
