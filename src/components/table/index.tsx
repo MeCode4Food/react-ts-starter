@@ -27,10 +27,10 @@ const Table = ({ tableHeaders, tableData, caption, lastButton }: TableProps) => 
                     return <td key={index}>{row[header]}</td>
                   })
                 }
-                { 
+                {
                   lastButton ? 
                     <td><button 
-                      onClick={lastButton.onClick}
+                      onClick={(e) => lastButton.onClick(e, row)}
                       className="btn btn-primary">
                       {lastButton.text}
                     </button></td> : null
@@ -51,7 +51,7 @@ export type TableProps = {
   lastButton?: {
     onClick: any,
     text: string
-  }
+  },
 }
 
 export default Table

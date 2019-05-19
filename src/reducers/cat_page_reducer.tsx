@@ -10,21 +10,22 @@ const initialState = {
 
 const catPageReducer = (state = initialState, action: CatActions) => {
   const catArray = state.cats
+  let newCatArray = [ ...catArray ]
   switch (action.type) {
     case CatActionTypes.ADD_CAT:
       console.log('inside reducer')
-      const newCatArray = [
+      newCatArray = [
         ...catArray,
         action.payload
       ]
-      return { ...state, cats:newCatArray } 
+      return { ...state, cats: newCatArray } 
     case CatActionTypes.REMOVE_CAT:
-      catArray.filter(cat => {
+      newCatArray = catArray.filter(cat => {
         // return only cats without names equal to name
         // also make sure the payload exists using a null check
         return cat.name !== action.payload
       })
-      return { ...state, cats:catArray }
+      return { ...state, cats: newCatArray }
     default:
       return state
   }

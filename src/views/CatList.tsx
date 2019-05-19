@@ -10,6 +10,7 @@ import Table from "src/components/table";
 
 import * as _ from 'lodash';
 import Row from 'src/components/container/Row';
+import Cat from 'src/model/cat';
 
 class CatList extends Component<CatPageState & CatDispatchProps> {
   constructor(props: any){
@@ -59,8 +60,9 @@ class CatList extends Component<CatPageState & CatDispatchProps> {
     )
   }
 
-  public lastButtonOnClick(event: MouseEvent){
-    console.log(event.target)
+  public lastButtonOnClick(event: MouseEvent, catToRemove: Cat){
+    const { removeCat } = this.props
+    removeCat(catToRemove.name)
   }
 }
 
