@@ -35,7 +35,7 @@ class CatList extends Component<CatPageState & CatDispatchProps> {
       <Container fluid={true} className="main-content-container px-5 py-3">
         <h3 className="mb-3">Cat List</h3>
         <Row>
-          <form onSubmit={this.handleSubmit} className="col-8">
+          <form onSubmit={this.handleSubmit} className="col-xs-12 col-md-8">
             <div className="form-group">
               <label>
                 Cat Name:
@@ -46,8 +46,9 @@ class CatList extends Component<CatPageState & CatDispatchProps> {
             <br />
           </form>
         </Row>
-        <Row className="mt-3 col-10">
+        <Row>
           <Table 
+            className="mt-5 col-xs-12 col-md-10"
             tableData={cats}
             tableHeaders={headers}
             caption="Here be Cats"

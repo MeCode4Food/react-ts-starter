@@ -1,9 +1,9 @@
 import React from 'react'
 import * as _ from 'lodash'
 
-const Table = ({ tableHeaders, tableData, caption, lastButton }: TableProps) => {
+const Table = ({ tableHeaders, tableData, caption, lastButton, className }: TableProps) => {
   return (
-    <table className="table">
+    <table className={`table ${className}`}>
       { caption ? <caption>{caption}</caption> : null }
       <thead>
         <tr>
@@ -52,6 +52,7 @@ export type TableProps = {
     onClick: (event: any, row: any, index: number) => any,
     text: string
   },
+  className? : string
 }
 
 export default Table

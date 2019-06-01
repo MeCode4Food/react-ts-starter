@@ -48,10 +48,11 @@ const StyledSidebar = styled.div`
   .sidebar-collapse{
     max-height: 50vh;
     overflow: hidden;
-    transition: max-height .3s ease;
+    transition: max-height .5s ease;
 
     &:not(.show){
       max-height: 0;
+      transition: max-height .5s ease;
     }
   }
 `

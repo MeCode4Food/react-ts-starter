@@ -20,7 +20,7 @@ class Navbar extends Component<NavbarProps & AppMiscProps & AppMiscState> {
       <StyledNavbar {...attr} >
         <HamburgerMenu
           showSidebar={showSidebar}
-          className="m-4 d-xs-inline-block d-lg-none" 
+          className="m-4 d-xs-inline-block d-md-none" 
           onClick={this.onToggleClick} />
       </StyledNavbar>
     )
