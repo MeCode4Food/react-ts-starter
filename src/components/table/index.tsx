@@ -30,7 +30,7 @@ const Table = ({ tableHeaders, tableData, caption, lastButton }: TableProps) => 
                 {
                   lastButton ? 
                     <td><button 
-                      onClick={(e) => lastButton.onClick(e, row)}
+                      onClick={(e) => lastButton.onClick(e, row, index)}
                       className="btn btn-primary">
                       {lastButton.text}
                     </button></td> : null
@@ -49,7 +49,7 @@ export type TableProps = {
   tableData: Array<{[propName : string] : any}>,
   caption?: string,
   lastButton?: {
-    onClick: any,
+    onClick: (event: any, row: any, index: number) => any,
     text: string
   },
 }

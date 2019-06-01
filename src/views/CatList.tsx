@@ -3,9 +3,9 @@ import React, { Component, FormEvent } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators, Dispatch, AnyAction, ActionCreator } from 'redux';
 import { CatFormInput } from 'typings';
-import { CatPageState } from 'src/reducers/cat_page_reducer';
+import { CatPageState } from 'src/reducers/cat-page-reducer';
 import { STORE_STATE } from 'src/reducers';
-import { addCat, removeCat, AddCatAction, RemoveCatAction } from 'src/actions';
+import { addCat, removeCat, AddCatAction, RemoveCatAction } from 'src/actions/cat-actions';
 import Table from "src/components/table";
 
 import * as _ from 'lodash';
@@ -42,11 +42,11 @@ class CatList extends Component<CatPageState & CatDispatchProps> {
               </label>
               <input className="form-control" type='text' name='name' />
             </div>
-            <br />
             <button className="btn btn-primary" type='submit'>Add Cat</button>
+            <br />
           </form>
         </Row>
-        <Row className="mt-3">
+        <Row className="mt-3 col-10">
           <Table 
             tableData={cats}
             tableHeaders={headers}
@@ -60,9 +60,9 @@ class CatList extends Component<CatPageState & CatDispatchProps> {
     )
   }
 
-  public lastButtonOnClick(event: MouseEvent, catToRemove: Cat){
+  public lastButtonOnClick(event: MouseEvent, catToRemove: Cat, index: number){
     const { removeCat } = this.props
-    removeCat(catToRemove.name)
+    removeCat(index)
   }
 }
 

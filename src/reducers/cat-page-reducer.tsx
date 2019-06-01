@@ -1,5 +1,4 @@
-import { CatActionTypes } from 'src/actions/types';
-import { CatActions} from 'src/actions';
+import { CatActions, CatActionTypes} from 'src/actions/cat-actions';
 import Cat from 'src/model/cat';
 
 const initialState = {
@@ -20,10 +19,10 @@ const catPageReducer = (state = initialState, action: CatActions) => {
       ]
       return { ...state, cats: newCatArray } 
     case CatActionTypes.REMOVE_CAT:
-      newCatArray = catArray.filter(cat => {
+      newCatArray = catArray.filter((cat, index) => {
         // return only cats without names equal to name
         // also make sure the payload exists using a null check
-        return cat.name !== action.payload
+        return index !== action.payload
       })
       return { ...state, cats: newCatArray }
     default:

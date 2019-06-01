@@ -32,8 +32,7 @@
     "esModuleInterop": true,
     "strict": true,
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "incremental": true
+    "isolatedModules": true
   },
   "exclude": [
     "node_modules",

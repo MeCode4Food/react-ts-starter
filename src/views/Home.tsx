@@ -1,19 +1,20 @@
 import Container from "src/components/container/Container";
-import Row from 'src/components/container/Row';
 import React from 'react';
 import styled from 'styled-components';
 
 const Home = () => (
   <Container fluid={true} className="main-content-container px-4 py-3">
-    <Row noGutters={true} className="page-header py-4">
-      Welcome to CK's website
-      <br />
-      <br />
-      Here have a bongo cat for coming this far.
+    {/* <Row noGutters={true} className="page-header py-4">
+    </Row> */}
+    <div>
+      <h2>Welcome to CK's website</h2 >
+      <div>
+        <p>Here have a bongo cat for coming this far.</p>
+      </div>
       <StyledImgParent>
-        <StyledImg src={require('../assets/BongoCat.gif')} />
+        <StyledImg src={require('../static/images/BongoCat.gif')} />
       </StyledImgParent> 
-    </Row>
+    </div>
   </Container>
 )
 

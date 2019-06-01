@@ -19,5 +19,7 @@ const StyledFooter = styled.footer`
   position: fixed;
   width: inherit;
   bottom: 0;
+  font-size: 10px;
+  color: #A0A0A0;
 `
 export default Footer
