@@ -2,7 +2,7 @@ import { AppActions, AppActionTypes } from 'src/actions/app-actions';
 
 
 const initialState = {
-  showSidebar: true
+  showSidebar: false
 }
 
 const appReducer = (state = initialState, action: AppActions) => {
