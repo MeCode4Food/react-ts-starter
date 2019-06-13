@@ -1,10 +1,13 @@
 import * as React from "react";
 import { Redirect } from "react-router-dom";
-import Home from "../views/Home"
+
+// Main Pages
+import Home from "../views/home"
+import CatList from 'src/views/cat-list';
+import CatStats from 'src/views/cat-stats';
 
 // Layout Types
 import { DefaultLayout } from "../layouts";
-import CatList from 'src/views/CatList';
 
 export default [
   {
@@ -25,6 +28,13 @@ export default [
     layout: DefaultLayout,
     component: CatList,
     title: "Cat List",
+    glyphicon: "user"
+  },
+  {
+    path: "/cat-stats",
+    layout: DefaultLayout,
+    component: CatStats,
+    title: "Cat Stats",
     glyphicon: "user"
   },
 ]

@@ -1,6 +1,5 @@
 import { AppActions, AppActionTypes } from 'src/actions/app-actions';
 
-
 const initialState = {
   showSidebar: false
 }
